@@ -1,0 +1,17 @@
+#An Example .couchapprc
+
+{
+  "env": {
+    "default": {
+      "db": "http://phil:luna16@127.0.0.1:5984/sofa-local"
+    },
+    "dev": {
+      "db": "http://jchris:secretpass@jchris.mfdz.com:5984/sofa-dev"
+    },
+    "production": {
+      "db": "http://jchris:secretpass@jchrisa.net/drl"
+    }
+  }
+}
+
+
