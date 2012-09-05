@@ -1,1 +1,0 @@
-"|IFS=' ' && exec /usr/bin/procmail || exit 75 #phil"

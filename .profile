@@ -2,6 +2,10 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
+#if [ -f ~/.zshrc ]; then
+#  . ~/.zshrc
+#fi
+
 if [ -f ~/.gitrc ]; then
   . ~/.gitrc
 fi
