@@ -26,3 +26,8 @@
 	untracked=cyan
 [branch]
 	autosetupmerge=true
+
+#add gitignore with
+#git config --global core.excludesfile ~/.g
+[core]
+	excludesfile = /Users/phil/.gitignore
