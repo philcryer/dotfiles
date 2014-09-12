@@ -1,4 +1,4 @@
 dotty
 =====
 
-My dotfiles for bash, zsh, git and vim.
+My dotfiles for profile, bash, zsh, git and vim.
