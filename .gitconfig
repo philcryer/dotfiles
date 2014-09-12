@@ -1,6 +1,6 @@
 [user]
-	name = phil.cryer
-	email = phil@cryer.us
+	name = No Name
+	email = no@email.com
 [alias]
 	co =checkout
 	st = status
@@ -30,4 +30,4 @@
 #add gitignore with
 #git config --global core.excludesfile ~/.g
 [core]
-	excludesfile = /Users/phil/.gitignore
+	excludesfile = ~/.gitignore

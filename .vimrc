@@ -110,9 +110,6 @@ au BufRead,BufNewFile /etc/nginx/*.conf set ft=nginx
 au BufRead,BufNewFile *.vcl :set ft=vcl
 au! Syntax vcl source ${HOME}/.vim/syntax/vcl.vim
 
-
-
-
 " turn off auto adding comments on next line
 " so you can cut and paste reliably
 " http://vimdoc.sourceforge.net/htmldoc/change.html#fo-table
