@@ -7,6 +7,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	echo -n "=> Copying files..." 
 	cp -Rf .* ~
+
+	#[TODO]
+	#if there are existing files, back them up in a ~/.dotty-backup dir
+	#.bashrc .gitconfig .gitignore .gitrc .profile .vimrc .zshrc
+
 	echo "done"
 	echo "NOTICE:"
 	echo "=> ZSHRC check/change timezone, currently set as `cat ~/.zshrc|grep TZ`"
