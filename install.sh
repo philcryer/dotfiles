@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "This will overwrite your dotfiles for profile bash, git, vim, zsh in `echo ~`"
+echo "This will overwrite your dotfiles for profile, bash, git, vim and zsh in `echo ~`"
 
 read -p "Are you sure you want to do this? [Y/n] " -n 1 -r; echo   
 if [[ $REPLY =~ ^[Yy]$ ]]
