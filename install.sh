@@ -5,18 +5,23 @@ echo "This will overwrite your dotfiles for profile, bash, git, vim and zsh in `
 read -p "Are you sure you want to do this? [Y/n] " -n 1 -r; echo   
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	echo -n "=> Copying files..." 
-	cp -Rf .* ~
+	echo -n "=> Creating directories..." 
   if [ ! -d "${HOME}/.vim/backups" ]; then
     mkdir -p ${HOME}/.vim/backups
   fi
-	cp fak3r.* ~/.oh-my-zsh/themes/
-
-	#[TODO]
-	#if there are existing files, back them up in a ~/.dotty-backup dir
-	#.bashrc .gitconfig .gitignore .gitrc .profile .vimrc .zshrc
-
 	echo "done"
+
+	echo -n "=> Copying files..." 
+	cp -Rf src/.* ${HOME}
+	cp src/fak3r.zsh-theme ~/.oh-my-zsh/themes/
+	echo "done"
+
+  echo -n "=> Adding oh-my-zsh theme (if found)..." 
+  if [ ! -d "${HOME}/.oh-my-zsh" ]; then
+	  cp src/fak3r.zsh-theme ${HOME}/.oh-my-zsh/themes/
+  fi
+	echo "done"
+
 	echo "NOTICE:"
 	echo "=> ZSHRC check/change timezone, currently set as `cat ~/.zshrc|grep TZ`"
 	echo "=> GITCONFIG change name and eamil"

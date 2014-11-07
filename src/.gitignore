@@ -37,6 +37,6 @@ ehthumbs.db
 Thumbs.db
 
 # moar files to ignore #
-###########**###########
-*.bak 
+########################
+*.bak
 *.swp
