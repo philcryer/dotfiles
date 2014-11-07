@@ -16,9 +16,10 @@ then
 	cp src/fak3r.zsh-theme ~/.oh-my-zsh/themes/
 	echo "done"
 
-  echo -n "=> Adding oh-my-zsh theme (if found)..." 
+  echo -n "=> (If found) adding oh-my-zsh theme and plugins..." 
   if [ ! -d "${HOME}/.oh-my-zsh" ]; then
-	  cp src/fak3r.zsh-theme ${HOME}/.oh-my-zsh/themes/
+	  cp src/.oh-my-zsh/themes/fak3r.zsh-theme ${HOME}/.oh-my-zsh/themes/
+    cp -R src/.oh-my-zsh/plugins/* ${HOME}/.oh-my-zsh/plugins/
   fi
 	echo "done"
 
