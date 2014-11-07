@@ -12,8 +12,7 @@ then
 	echo "done"
 
 	echo -n "=> Copying files..." 
-	cp -Rf src/.* ${HOME}
-	cp src/fak3r.zsh-theme ~/.oh-my-zsh/themes/
+	cp -Rf src/.bashrc src/.gitconfig src/.gitignore src/.gitrc src/.oh-my-zsh src/.profile src/.ssh src/.vim src/.vimrc src/.zshrc ${HOME}
 	echo "done"
 
   echo -n "=> (If found) adding oh-my-zsh theme and plugins..." 
