@@ -1,9 +1,8 @@
-# fak3r-zsh.theme - MIT Lic 2014
-# for http://ohmyz.sh/
+# fak3r-zsh.theme - MIT Lic 2014:w
 
 # Some symbols you could use:
 # ☀ ✹ ☄ ♆ ♀ ♁ ♐ ♇ ♈ ♉ ♚ ♛ ♜ ♝ ♞ ♟ ♠ ♣ ⚢ ⚲ ⚳ ⚴ ⚥ ⚤ ⚦ ⚒ ⚑ ⚐ ♺ ♻ ♼ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷
-# ✡ ✔ ✖ ✚ ✱ ✤ ✦ ❤ ➜ ➟ ➼ ✂ ✎ ✐ ⨀ ⨁ ⨂ ⨍ ⨎ ⨏ ⨷ ⩚ ⩛ ⩡ ⩱ ⩲ ⩵  ⩶ ⨠
+# ✡ ✔ ✖ ✚ ✱ ✤ ✦ ❤ ➜ ➟ ➼ ✂ ✎ ✐ ⨀ ⨁ ⨂ ⨍ ⨎ ⨏ ⨷ ⩚ ⩛ ⩡ ⩱ ⩲ ⩵  ⩶ ⨠ 
 # ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬒ ⬓ ⬔ ⬕ ⬖ ⬗ ⬘ ⬙ ⬟  ⬤ 〒 ǀ ǁ ǂ ĭ Ť Ŧ
 
 # define your box name at ~/.box_name if you want something special
@@ -35,6 +34,6 @@ function prompt_char {
 	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo $; fi
 }
 
-PROMPT="%{$terminfo[bold]$FG[033]%}${current_dir}%{$reset_color%}$(git_prompt_info)${git_info}
+PROMPT="%{$fg[yellow]%}[$(box_name)]%{$reset_color%} %{$terminfo[bold]$FG[033]%}${current_dir}%{$reset_color%}$(git_prompt_info)${git_info}
 ⚡ %{$fg[green]%} %{$reset_color%}"
 RPROMPT='%{$FG[239]%}%D | %*%{$reset_color%}'
