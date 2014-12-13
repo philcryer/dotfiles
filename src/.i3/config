@@ -161,10 +161,19 @@ bindsym $mod+x [urgent=latest] focus
 new_window 1pixel
 
 exec --no-startup-id "unity-settings-daemon"
+exec --no-startup-id "gnome-keyring-daemon"
 exec --no-startup-id "nm-applet"
 exec --no-startup-id "kupfer --no-splash"
+exec --no-startup-id "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
+exec --no-startup-id "xset dpms 1800 3600 3630"
+exec --no-startup-id "xautolock -time 10 -locker "i3lock -c 000000" &"
+
 exec --no-startup-id "/usr/bin/feh --bg-scale /usr/share/backgrounds/xgu472hf2_by_lariliikala.jpg"
 exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 3; exec terminator; workspace 1'
 
 
 # set in rc.local setpci -v -H1 -s 00:01.00 BRIDGE_CONTROL=0
+
+# some above sourced from
+# sourced from https://gitorious.org/fmarier-misc-scripts/user-scripts/source/79a213ec1cbe090fd25ebcad58349ddb30500ced:startup
+# details and tips http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
