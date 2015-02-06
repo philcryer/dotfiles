@@ -1,7 +1,7 @@
 dotty
 =====
 
-These are my working dotfiles and configurations for profile, ssh, bash, zsh, git, vim and now [i3](http://i3wm.org/) (a Linux window manager). You don't need to use all of these to use these configs, if . A handy install file will popuplate your home dir, also [Oh my zsh](http://ohmyz.sh/) is recommended, if found you'll get my theme for that too.
+These are my working dotfiles and configurations for profile, ssh, bash, zsh, git, vim and now [i3](http://i3wm.org/) (a Linux window manager). You don't need to use all of these to use these configs, if . A handy install file will popuplate your home dir, also [Oh my zsh](http://ohmyz.sh/) is recommended (see below if interested) if found you'll get my theme for that too.
 
 ## vi errors? Could be a bug, might need to do this
 
