@@ -1,0 +1,13 @@
+trackpad/mouse
+sudo apt-get install gpointing-device-settings
+
+keyboard mapping
+sudo apt-get install pommed
+
+screensaver/turn off screen (outside of xlock)
+xset dpms force off
+
+control keyboard backlight
+echo '2' > /sys/devices/pci0000:00/0000:00:02.0/backlight/acpi_video0/brightness
+echo '0' > /sys/devices/platform/applesmc.768/leds/smc::kbd_backlight/brightness
+exit 0

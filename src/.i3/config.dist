@@ -15,9 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-font pango:DejaVu Sans Mono 18
-#font pango:Terminus 18
+font pango:DejaVu Sans Mono 8
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -33,7 +31,6 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
-#bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -117,7 +114,6 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
-#bindsym $mod+Shift+r reload
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
@@ -155,25 +151,3 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
-### addd
-bindsym $mod+x [urgent=latest] focus
-new_window 1pixel
-
-exec --no-startup-id "unity-settings-daemon"
-exec --no-startup-id "gnome-keyring-daemon"
-exec --no-startup-id "nm-applet"
-exec --no-startup-id "kupfer --no-splash"
-#exec --no-startup-id "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
-exec --no-startup-id "xset dpms 1800 3600 3630"
-#exec --no-startup-id "xautolock -time 10 -locker "i3lock -c 000000 --dpms" &"
-
-exec --no-startup-id "/usr/bin/feh --bg-scale /usr/share/backgrounds/xgu472hf2_by_lariliikala.jpg"
-exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 3; exec terminator; workspace 1'
-
-
-# set in rc.local setpci -v -H1 -s 00:01.00 BRIDGE_CONTROL=0
-
-# some above sourced from
-# sourced from https://gitorious.org/fmarier-misc-scripts/user-scripts/source/79a213ec1cbe090fd25ebcad58349ddb30500ced:startup
-# details and tips http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
