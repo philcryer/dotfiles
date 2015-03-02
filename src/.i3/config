@@ -152,9 +152,23 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+#bar {
+#        status_command i3status
+#}
+
 bar {
-        status_command i3status
+#position top
+#status_command i3status --config ~/.i3/.i3status.conf 
+status_command i3status --config ~/.i3/i3status.conf 
+#| ~/.i3/status.tcl
+#status_command i3status 
+colors {
+urgent_workspace   #000000 #000000 #c0c0c0
 }
+}
+
+
+bindsym $mod+p exec "i3lock -c 000000 --dpms"
 
 ### addd
 bindsym $mod+x [urgent=latest] focus
@@ -164,12 +178,17 @@ exec --no-startup-id "unity-settings-daemon"
 exec --no-startup-id "gnome-keyring-daemon"
 exec --no-startup-id "nm-applet"
 exec --no-startup-id "kupfer --no-splash"
-#exec --no-startup-id "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
+exec --no-startup-id "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
 exec --no-startup-id "xset dpms 1800 3600 3630"
 #exec --no-startup-id "xautolock -time 10 -locker "i3lock -c 000000 --dpms" &"
 
-exec --no-startup-id "/usr/bin/feh --bg-scale /usr/share/backgrounds/xgu472hf2_by_lariliikala.jpg"
-exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 3; exec terminator; workspace 1'
+# exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 2; exec ~/bin/Telegram/Telegram; workspace 3; chromium-browser --app=https://monitsa.slack.com/messages/general/; workspace 4; exec terminator; workspace 1'
+
+exec --no-startup-id i3-msg 'workspace 1; exec firefox'
+exec --no-startup-id i3-msg 'workspace 2; exec ~/bin/Telegram/Telegram'
+#exec --no-startup-id i3-msg 'workspace 3; chromium-browser "--app=https://monitsa.slack.com/messages/general/"'
+exec --no-startup-id i3-msg 'workspace 4; exec terminator; workspace 1'
+
 
 
 # set in rc.local setpci -v -H1 -s 00:01.00 BRIDGE_CONTROL=0

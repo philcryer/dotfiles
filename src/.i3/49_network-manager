@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# work around a NetworkManager bug, waking it up after resume (sometimes it
+# stays sleeping after resume)
+#
+# sudo cp 49_network-manager /etc/pm/sleep.d/49_network-manager
+# sudo chmod 755 /etc/pm/sleep.d/49_network-manager
+#
+
+case "$1" in
+    suspend|hibernate)
+ ;;
+
+    resume|thaw)
+ nmcli nm status
+ nmcli dev status
+ state=`nmcli -t -f STATE nm status`
+ if [ "$state" = "asleep" ]; then
+     echo "waking up NetworkManager"
+     nmcli nm sleep false
+     nmcli nm status
+ fi
+ ;;
+esac
+
+exit 0
