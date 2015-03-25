@@ -20,4 +20,11 @@ alias ports='lsof -nPi | grep LIST | awk '\''{printf "%-20s%-5s%-5s%s\n",$1,$5,$
 
 EDITOR=vim.nox
 
+# default ls colors in OSX aren't good for dark themes - this fixes that (bsd ls)
+if [ `uname` = 'Darwin' ];then
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagaced
+    alias ls="ls -G"
+fi
+
 mesg n
