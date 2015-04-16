@@ -12,14 +12,21 @@ then
 	echo "done"
 
 	echo -n "=> Copying files..." 
-	cp -Rf src/.bashrc src/.gitconfig src/.gitignore src/.gitrc src/.oh-my-zsh src/.profile src/.ssh src/.vim src/.vimrc src/.zshrc ${HOME}
+	#cp -Rf src/.bashrc src/.gitconfig src/.gitignore src/.gitrc src/.oh-my-zsh src/.profile src/.ssh src/.vim src/.vimrc src/.zshrc ${HOME}
+	cp -Rf src/.bashrc src/.gitconfig src/.gitignore src/.gitrc src/.oh-my-zsh src/.profile src/.ssh src/.vim src/.vimrc ${HOME}
 	echo "done"
 
-  echo -n "=> (If found) adding oh-my-zsh theme and plugins..." 
-  if [ ! -d "${HOME}/.oh-my-zsh" ]; then
-	  cp src/.oh-my-zsh/themes/fak3r.zsh-theme ${HOME}/.oh-my-zsh/themes/
-    cp -R src/.oh-my-zsh/plugins/* ${HOME}/.oh-my-zsh/plugins/
-  fi
+  #echo -n "=> (If found) adding oh-my-zsh theme and plugins..." 
+#  if [ ! -d "${HOME}/.oh-my-zsh" ]; then
+#	  cp src/.oh-my-zsh/themes/fak3r.zsh-theme ${HOME}/.oh-my-zsh/themes/
+#    cp -R src/.oh-my-zsh/plugins/* ${HOME}/.oh-my-zsh/plugins/
+#  fi
+  echo -n "=> Installing zpresto for zsh..."
+  cd src; ./install_prezto.sh
+	echo "done"
+
+  echo "=> Attempting to change shell..."
+  chsh -s /bin/zsh
 	echo "done"
 
 	echo "NOTICE:"
