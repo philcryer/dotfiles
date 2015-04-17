@@ -1,32 +1,38 @@
 #!/bin/bash
 
 echo "This will overwrite your dotfiles for profile, bash, git, vim, zsh in `echo ~`"
-
 read -p "Are you sure you want to do this? [Y/n] " -n 1 -r; echo
+
 if [[ $REPLY =~ ^[Yy]$ ]]
+	echo "=> Checking for required software..."
+    for cli in zsh git; do
+   	if ! type "$cli" > /dev/null 2>&1; then
+      "NOTICE $cli is not installed - trying to install"
+	     sudo apt-get install $cli
+    fi
+  done
+  echo "=> Checing for required packages..."
+  if [ ! -d '/usr/share/doc/vim-nox' ]; then
+    sudo apt-get install vim-nox
+  fi
 then
 	echo -n "=> Creating directories..." 
-  if [ ! -d "${HOME}/.vim/backups" ]; then
-    mkdir -p ${HOME}/.vim/backups
-  fi
+  	if [ ! -d "${HOME}/.vim/backups" ]; then
+    		mkdir -p ${HOME}/.vim/backups
+  	fi
 	echo "done"
 
 	echo -n "=> Copying files..." 
-	#cp -Rf src/.bashrc src/.gitconfig src/.gitignore src/.gitrc src/.oh-my-zsh src/.profile src/.ssh src/.vim src/.vimrc src/.zshrc ${HOME}
 	cp -Rf src/.bashrc src/.gitconfig src/.gitignore src/.gitrc src/.oh-my-zsh src/.profile src/.ssh src/.vim src/.vimrc ${HOME}
 	echo "done"
 
-  #echo -n "=> (If found) adding oh-my-zsh theme and plugins..." 
-#  if [ ! -d "${HOME}/.oh-my-zsh" ]; then
-#	  cp src/.oh-my-zsh/themes/fak3r.zsh-theme ${HOME}/.oh-my-zsh/themes/
-#    cp -R src/.oh-my-zsh/plugins/* ${HOME}/.oh-my-zsh/plugins/
-#  fi
-  echo -n "=> Installing zpresto for zsh..."
-  cd src; ./install_prezto.sh
+  	echo -n "=> Installing zpresto for zsh..."
+    chmod 755 src/install_prezto.sh
+  	cd src; ./install_prezto.sh
 	echo "done"
 
-  echo "=> Attempting to change shell..."
-  chsh -s /bin/zsh
+  	echo "=> Attempting to change shell..."
+  	chsh -s /bin/zsh
 	echo "done"
 
 	echo "NOTICE:"
