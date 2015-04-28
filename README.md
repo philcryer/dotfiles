@@ -1,7 +1,18 @@
 dotty
 =====
 
-These are my working dotfiles and configurations for profile, ssh, bash, zsh, git, vim and now [i3](http://i3wm.org/) (a minimal and fast Linux window manager). You don't need to use all of these to use these configs, but I do, and I like to be transparent, so they're all here. A handy install file will popuplate your home dir, also [sbusso/zprezto](https://github.com/sbusso/zprezto) will be installed and setup with a basic config.
+These are my working dotfiles and configurations for *nix consoles. I built this repo to standarize my configs across any host I work on, plus I like to be transparent
+
+
+so they're all here. A handy install file will popuplate your home dir, also [sbusso/zprezto](https://github.com/sbusso/zprezto) will be installed and setup with a basic config.
+
+
+ssh, bash, zsh, git, vim and now [i3](http://i3wm.org/) (a minimal and fast Linux window manager). 
+
+The installation of my `dotty` files is now automated through [philcryer/basejump](https://github.com/philcryer/basejump), see the [README.md](https://github.com/philcryer/basejump/README.md) for directions and usage.
+
+
+I'm working in some nice `.osx` defaults thanks to the repo [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 
 ## usage
 
