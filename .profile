@@ -1,24 +1,12 @@
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
-fi
-#if [ -f ~/.zshrc ]; then
-#  . ~/.zshrc
-#fi
-
-if [ -f ~/.gitrc ]; then
-  . ~/.gitrc
-fi
-
-# Add any path vars here
+# set paths, include ones for gemfiles and homebrew (if osx)
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/gems/1.8/bin/
-
-if [ -d ~/bin/ ]; then
-   PATH=$PATH:~/bin/
+if [ -d '${HOME}/bin/' ]; then
+	export PATH="${HOME}/bin:${PATH}"
 fi
 
+# alias
 alias ports='lsof -nPi | grep LIST | awk '\''{printf "%-20s%-5s%-5s%s\n",$1,$5,$7,$8}'\'' | sort | uniq'
 
-EDITOR=vim.nox
 
 # default ls colors in OSX aren't good for dark themes - this fixes that (bsd ls)
 if [ `uname` = 'Darwin' ];then
@@ -26,5 +14,12 @@ if [ `uname` = 'Darwin' ];then
     export LSCOLORS=GxFxCxDxBxegedabagaced
     alias ls="ls -G"
 fi
+
+# variables
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export EDITOR=vim.nox
 
 mesg n
