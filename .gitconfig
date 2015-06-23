@@ -1,11 +1,13 @@
+[user]
+	email = <changeme>
+	name = <changeme>
+
 [alias]
-
-# http://www.linux.com/news/featured-blogs/200-libby-clark/826426-tips-for-pro-git-users-from-8-open-source-project-leaders
-changes = diff --name-status -r
-diffstat = diff --stat -r
-whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
-pwhatis = show -s --pretty='tformat:%h, %s, %ad' --date=short
-
+	# http://www.linux.com/news/featured-blogs/200-libby-clark/826426-tips-for-pro-git-users-from-8-open-source-project-leaders
+	changes = diff --name-status -r
+	diffstat = diff --stat -r
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+	pwhatis = show -s --pretty='tformat:%h, %s, %ad' --date=short
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -13,6 +15,9 @@ pwhatis = show -s --pretty='tformat:%h, %s, %ad' --date=short
 	# View the current working tree status using the short format
 	s = status -s
 	st = status
+
+	# checkout
+	co = checkout
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
