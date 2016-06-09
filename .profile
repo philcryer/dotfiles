@@ -23,6 +23,10 @@ export LANG="en_US.UTF-8"
 export EDITOR=vim.nox
 # Enable CLI colors
 export CLICOLOR=1
+# Make OSX dirs appear in a lighter blue for the ls
+export LSCOLORS=ExGxCxDxCxegedabagacec
+# Props to dd for the following to You are so siq dude!
+
 TZ='Chicago/America'; export TZ
 
 mesg n
