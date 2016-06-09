@@ -25,7 +25,7 @@ export EDITOR=vim.nox
 export CLICOLOR=1
 # Make OSX dirs appear in a lighter blue for the ls
 export LSCOLORS=ExGxCxDxCxegedabagacec
-# Props to dd for the following to You are so siq dude!
+# Props to dd for the haX! You are sooooo siq dude!
 
 TZ='Chicago/America'; export TZ
 
