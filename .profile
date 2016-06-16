@@ -20,13 +20,15 @@ export LC_CTYPE="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
-export EDITOR=vim.nox
+export EDITOR=vim
 # Enable CLI colors
 export CLICOLOR=1
-# Make OSX dirs appear in a lighter blue for the ls
-export LSCOLORS=ExGxCxDxCxegedabagacec
-# Props to dd for the haX! You are sooooo siq dude!
-
 TZ='Chicago/America'; export TZ
+
+# props to dd for the following to make OSX dirs appear in a lighter blue for the ls
+export LSCOLORS=ExGxCxDxCxegedabagacec
+
+# git config user.name "philcryer"
+# git config user.email "phil@philcryer.com"
 
 mesg n

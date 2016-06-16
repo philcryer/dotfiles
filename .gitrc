@@ -77,4 +77,7 @@ PS1="[\w]$(parse_git_branch)$(prompt_symbol $last_return_value) "
 #PS1="[\w$(parse_git_branch)]$ "
 }
 
+git config user.name "philcryer"
+git config user.email "phil@philcryer.com"
+
 PROMPT_COMMAND=prompt_func
