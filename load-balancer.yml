@@ -58,8 +58,8 @@
         state:  nodes_present
         port: 80
         nodes:
-          - {'ipAddress': '10.75.20.15', 'privatePort': 22}
-          - {'ipAddress': '10.75.20.16', 'privatePort': 44}
+          - {'ipAddress': '10.75.20.15', 'privatePort': 80}
+          - {'ipAddress': '10.75.20.16', 'privatePort': 80}
       register: clc
 
 
