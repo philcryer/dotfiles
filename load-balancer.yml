@@ -53,7 +53,7 @@
       clc_loadbalancer:
         alias: RUNC
         location: NY1
-        name: LD_balancer
+        name: LD_pool
         description: testlb1
         state:  nodes_present
         port: 80
