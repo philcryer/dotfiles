@@ -75,3 +75,38 @@ export RUBY_HEAP_FREE_MIN=500000
 # RUBY_HEAP_SLOTS_INCREMENT=250000
 # RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 # RUBY_GC_MALLOC_LIMIT=50000000
+
+# set paths, include ones for gemfiles and homebrew (if osx)
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/gems/1.8/bin/
+if [ -d '${HOME}/bin/' ]; then
+	export PATH="${HOME}/bin:${PATH}"
+fi
+
+# alias
+alias ports='lsof -nPi | grep LIST | awk '\''{printf "%-20s%-5s%-5s%s\n",$1,$5,$7,$8}'\'' | sort | uniq'
+
+
+# default ls colors in OSX aren't good for dark themes - this fixes that (bsd ls)
+if [ `uname` = 'Darwin' ];then
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagaced
+    alias ls="ls -G"
+fi
+
+# variables
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export EDITOR=vim
+# Enable CLI colors
+export CLICOLOR=1
+TZ='Chicago/America'; export TZ
+
+# props to dd for the following to make OSX dirs appear in a lighter blue for the ls
+export LSCOLORS=ExGxCxDxCxegedabagacec
+
+# git config user.name "philcryer"
+# git config user.email "phil@philcryer.com"
+
+mesg n

@@ -36,9 +36,11 @@
 ehthumbs.db
 Thumbs.db
 
-# moar files to ignore #
+# Compiled Python files
+########################
+*.pyc
+
+# Moar files to ignore #
 ########################
 *.bak
 *.swp
-# Compiled Python files
-*.pyc
