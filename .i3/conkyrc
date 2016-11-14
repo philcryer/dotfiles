@@ -1,0 +1,74 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+
+# Update interval in seconds
+update_interval 2.0
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+short_units yes
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up, link or address, to check for the interface
+# being solely up, being up and having link or being up, having link
+# and an assigned IP address. 
+if_up_strictness address
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+# use_spacer should have an argument of left, right, or none
+use_spacer left
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# Stuff after 'TEXT' will be formatted on screen
+TEXT
+
+# JSON for i3bar
+
+ [{"full_text": " ☻ [${exec whoami}] ", "color":"\#ff00f3"},
+  {"full_text": " ■ [$color $cpu% ${cpubar 4} ]", "color":"\#00A9B5"},
+  {"full_text": " || [$mem/$memmax - $memperc% ${membar 4}] ", "color":"\#B58900"},
+  {"full_text": " ▲ [${upspeed wlp2s0}] ", "color":"\#ff0000"},
+  {"full_text": " ▼ [${downspeed wlp2s0}] ", "color":"\#00fff2"},
+  {"full_text": " ♥ [${exec hostname}] ", "color":"\#6F3BFF"},
+  {"full_text": " ↑ [${uptime}] ","color": "\#dc322f"},
+  {"full_text": " [${time %a %d %b} ${time %H:%M:%S}] ","color": "\#2fdc57"}],
+
+  #{ "full_text" : "RAM ${memperc}%" , "color" :
+  #  ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} }],
+
+#TEXT
+#,[
+#Finds out if cmus is running. If it is, it provides 1) the current artist and 2) the current track. If cmus isn't running it outputs "Not Running"
+#  {"full_text": " [${exec sh .scripts/cmusconk.sh}] ", "color":"\#e4f800"},
+#Shows current user
+#  {"full_text": " ☻ [${exec whoami}] ", "color":"\#ff00f3"},
+#Shows hostname (heart for lack of better symbol)
+#  {"full_text": " ♥ [${exec hostname}] ", "color":"\#6F3BFF"},
+#Shows uploadspeed
+#  {"full_text": " ▲ [${upspeed enp4s0}] ", "color":"\#ff0000"},
+#Shows downloadspeed
+#  {"full_text": " ▼ [${downspeed enp4s0}] ", "color":"\#00fff2"},
+#Shows current memory usage with a bar
+#  {"full_text": " || [$mem/$memmax - $memperc% ${membar 4}] ", "color":"\#B58900"},
+#Shows current CPU usage with a bar
+#  {"full_text": " ■ [$color $cpu% ${cpubar 4} ]", "color":"\#00A9B5"},
+#Shows Battery
+#  {"full_text": " ▼ [${battery_percent BAT1}] ", "color":"\#00fff2"},
+#Shows upime
+#  {"full_text": " ↑ [${uptime}] ","color": "\#dc322f"},
+#Shows time
+#  {"full_text": " [${time %a %d %b} ${time %H:%M:%S}] ","color": "\#2fdc57"}],
+
+#See
