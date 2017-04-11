@@ -41,4 +41,4 @@ YMMV if you're not runningn Debian or Ubuntu.
 sudo apt-get install zsh
 ```
 
-YMMV if you're not runningn Debian or Ubuntu.
+YMMV if you're not running Debian or Ubuntu.
