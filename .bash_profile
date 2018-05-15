@@ -15,7 +15,8 @@ markup_git_branch() {
 }
 
 # define console
-export PS1="\[\033[0;35m\]\[\033[0m\033[0;35m\]\h \033[0;36m\]\W\$(markup_git_branch \$(parse_git_branch))\n\[\033[0;37m\]└─\[\033[0m\033[0;37m\] \$\[\033[0m\033[0;32m\] \[\033[0m\]"
+#export PS1="\[\033[0;35m\]\[\033[0m\033[0;35m\]\h \033[0;36m\]\W\$(markup_git_branch \$(parse_git_branch))\n\[\033[0;37m\]└─\[\033[0m\033[0;37m\] \$\[\033[0m\033[0;32m\] \[\033[0m\]"
+export PS1="\[\033[0;35m\]\[\033[0m\033[0;35m\]\h \[\033[0;36m\]\W\$(markup_git_branch \$(parse_git_branch))\n\[\033[0;37m\]└─\[\033[0m\033[0;37m\] \$\[\033[0m\033[0;32m\] \[\033[0m\]"
 
 # list all color options
 for (( i = 30; i < 38; i++ )); do echo -e "\033[0;"$i"m Normal: (0;$i); \033[1;"$i"m Light: (1;$i)"; done
@@ -26,5 +27,4 @@ if [ -d "$HOME/bin" ] ; then
 fi
 export PATH=$PATH:~/bin
 
-# bring in any other variables
-source .bashrc
+#source $HOME/.bashrc
