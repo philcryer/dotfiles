@@ -26,7 +26,5 @@ if [ -d "$HOME/bin" ] ; then
 fi
 export PATH=$PATH:~/bin
 
-export http_proxy="http://10.0.0.250:80"; export https_proxy="http://10.0.0.250:80"; export HTTP_PROXY="http://10.0.0.250:80"; export HTTPS_PROXY="http://10.0.0.250:80"
-
 # bring in any other variables
 source .bashrc
