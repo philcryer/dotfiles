@@ -1,11 +1,4 @@
-# .gitconfig based on:
-# https://gist.githubusercontent.com/scottnonnenberg/fefa3f65fdb3715d25882f3023b31c29/raw/d7a219e40eb9a3e208f783185eeb01a55604f30f/.gitconfig
-# https://blog.scottnonnenberg.com/better-git-configuration/
-
-[user]
-  email = phil@philcryer.com
-  name = philcryer
-
+# This is Git's per-user configuration file.
 [alias]
   prune = fetch --prune
   # Because I constantly forget how to do this
