@@ -1,39 +1,51 @@
-dotty
-=====
+<div align="center" border="0"><img src="src/logo.png" alt="dotfiles"></div>
 
-These are my working dotfiles and configurations for *nix consoles. I built this repo to standarize my configs across any host I work on, plus I like to be transparent
+# dotfiles
 
+These are my working dotfiles, configurations, and one liners for *nix consoles, mainly revelvant to Linux and macOS, with some specific things thrown in. I built this repo to standarize my configs across all hosts I work on, plus I like to be transparent, so they're all here. I use another project of mine, [philcryer/basejump](https://github.com/philcryer/basejump), to ues Ansible to automate the distribution of these files, as we all setting other standards on target hosts.  See the `basejump` [README.md](https://github.com/philcryer/basejump/README.md) for directions and usage.
 
-so they're all here. A handy install file will popuplate your home dir, also [sbusso/zprezto](https://github.com/sbusso/zprezto) will be installed and setup with a basic config.
+## features
+ 
+Battle tested configs and setups for:
 
-
-ssh, bash, zsh, git, vim and now [i3](http://i3wm.org/) (a minimal and fast Linux window manager). 
-
-The installation of my `dotty` files is now automated through [philcryer/basejump](https://github.com/philcryer/basejump), see the [README.md](https://github.com/philcryer/basejump/README.md) for directions and usage.
-
-
-I'm working in some nice `.osx` defaults thanks to the repo [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+* .aliases - some helpful settings
+* .bash_profile - a decent display prompt ouf the box, also includes ~/bin in you $PATH
+* .curlrc - verbose output on
+* .editorconfig 
+* .exports
+* .gitconfig - with many aliases for productivity
+* .gitignore_global
+* .gvimrc - if you use a GUI, I don't but keep this here for fun
+* .hushlogin - simplify logins by not getting all the junk from the server
+* .i3 - [i3wm.org](http://i3wm.org/) (a minimal and fast Linux window manager) 
+* .inputrc
+* .screenrc
+* .screenrc.full - more options than I need
+* .tmux.conf
+* .vimrc - old config
+* .wgetrc
+* .zprofilec - a holdover from [sbusso/zprezto](https://github.com/sbusso/zprezto) a nice zsh setup
+* .zshrc - a holdover from [sbusso/zprezto](https://github.com/sbusso/zprezto) a nice zsh setup
+* .osx - a WIP, compling best practices from projects like [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 
 ## usage
 
-run the handy `install.sh` script to automatically setup all of the dot files w/o prompts. Note, you should _read the code_ (amiright Mike?) before blindy running this.
+Check out the project, change into the directory
 
 ```
-./install.sh
+git clone https://github.com/philcryer/dotfiles.git
+cd dotfiles
 ```
 
-When it's done, close/reopen your session and you should be all set
+Then copy whatever you want into your `${HOME}' directory to  try them out
 
-## issues?
+## recommendations
 
-### vi errors? Could be a bug, or you might need to do this
+Run Linux... obviously, and `vim-nox` to take advantage of the vim plugins:
 
 ```
 sudo apt-get install vim-nox
-mkdir ~/.vim/backups
 ```
-
-YMMV if you're not runningn Debian or Ubuntu.
 
 ### don't have zsh installed?
 
@@ -41,4 +53,8 @@ YMMV if you're not runningn Debian or Ubuntu.
 sudo apt-get install zsh
 ```
 
-YMMV if you're not running Debian or Ubuntu.
+## issues or suggestions?
+
+Just let me know in the Issues section
+
+## thanks
