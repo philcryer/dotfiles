@@ -57,4 +57,4 @@ sudo apt-get install zsh
 
 Just let me know in the Issues section
 
-## thanks
+### thanks
