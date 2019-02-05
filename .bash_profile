@@ -27,4 +27,4 @@ if [ -d "$HOME/bin" ] ; then
 fi
 export PATH=$PATH:~/bin
 
-#source $HOME/.bashrc
+source $HOME/.aliases
