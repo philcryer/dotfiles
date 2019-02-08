@@ -34,10 +34,13 @@ else
 fi
 
 ################################################################################
-# Load the aliases file, if it exists
+# Load the aliases file, if it exists, and any -local overrides
 ################################################################################
 if [ -f "$HOME/.aliases" ] ; then
   source $HOME/.aliases
+fi
+if [ -f "$HOME/.aliases-local" ] ; then
+  source $HOME/.aliases-local
 fi
 
 ################################################################################
