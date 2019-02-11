@@ -39,8 +39,12 @@ fi
 if [ -f "$HOME/.aliases" ] ; then
   source $HOME/.aliases
 fi
-if [ -f "$HOME/.aliases-local" ] ; then
-  source $HOME/.aliases-local
+
+################################################################################
+# Load any work overrides, like aliases, paths or anything else needed
+################################################################################
+if [ -f "$HOME/.local/work" ] ; then
+  source $HOME/.local/work
 fi
 
 ################################################################################
