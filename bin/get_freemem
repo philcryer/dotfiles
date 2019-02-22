@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# h/t https://github.com/mikeokner/dotfiles/blob/master/.scripts/get_freemem
+
+# For Linux
+# free="$(free -m | grep - | awk '{print $4}')"
+
+# For Mac. Using top because there is no "free"
+free="$(top -l 1 -ncols 1 -n 1 | grep PhysMem | awk '{print $6}')"
+
+if [ -z "$free" ];
+    then
+        echo "?"
+    else
+        echo "$free"
+fi

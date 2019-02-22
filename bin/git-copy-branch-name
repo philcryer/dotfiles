@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# h/t https://github.com/holman/dotfiles/tree/master/bin
+#
+# Copy the current branch name to the clipboard.
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+echo $branch
+echo $branch | tr -d '\n' | tr -d ' ' | pbcopy

@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# h/t https://github.com/holman/dotfiles/tree/master/bin
+#
+# Use the last commit message and amend your stuffs.
+
+git commit --amend -C HEAD
