@@ -2,7 +2,7 @@
 
 # dotfiles
 
-These are my working dotfiles, configurations, and one liners for *nix consoles, mainly revelvant to Linux and macOS, with some specific things thrown in. I built this repo to standarize my configs across all hosts I work on, plus I like to be transparent, so they're all here. I use another project of mine, [philcryer/basejump](https://github.com/philcryer/basejump), to ues Ansible to automate the distribution of these files, as we all setting other standards on target hosts.  See the `basejump` [README.md](https://github.com/philcryer/basejump/README.md) for directions and usage.
+These are my working dotfiles, configurations, and one liners for *nix consoles, mainly revelvant to Linux and macOS, with some specific things thrown in. I built this repo to standarize my configs across all hosts I work on, plus I like to be transparent, so they're all here. I use another project of mine, [philcryer/basejump](https://github.com/philcryer/basejump), which uses Ansible to automate the distribution of these files, as we all setting other standards on target hosts.  See the `basejump` [README.md](https://github.com/philcryer/basejump/blob/master/README.md) for directions and usage.
 
 ## features
  
