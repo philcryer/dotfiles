@@ -1,0 +1,7 @@
+# to use RDP in macOS, install Xquarz (cask) and rdesktop (app)
+# run with `./bin/startx-rdp <servername>
+
+Xquartz &
+sleep 5
+export DISPLAY=:0
+rdesktop ${1}
