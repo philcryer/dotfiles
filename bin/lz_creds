@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+# USAGE: source lz_creds 'json-url'
+# 
+# It's important to `source` this script as it
+# updates the environment of the active shell process.
+# 
+json_url="$1"
+# Delete longest match of "data:application/json,".
+# The resulting string will be the JSON object.
+json="${json_url#*","}"
+echo "$json"
+# Grab the three values from the raw jq output.
+key=$(echo "$json" | jq -r '.AccessKeyId')
+secret=$(echo "$json" | jq -r '.SecretAccessKey')
+token=$(echo "$json" | jq -r '.SessionToken')
+# Export values to the environment. This will only
+# work properly if you `source` this script.
+export AWS_ACCESS_KEY_ID="$key"
+export AWS_SECRET_ACCESS_KEY="$secret"
+export AWS_SESSION_TOKEN="$token"
